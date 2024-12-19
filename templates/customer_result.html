@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Result</title>
+</head>
+<body>
+    <h1>Best Supplier</h1>
+    <p>Supplier: {{ result.best_supplier }}</p>
+    <p>Order Quantity: {{ result.order_quantity }} units</p>
+    <p>Cost per Unit: ${{ result.cost_per_unit }}</p>
+    <p>Location: {{ result.location }}</p>
+    <p>Delivery Time: {{ result.delivery_time }} days</p>
+    <p>Total Cost: ${{ result.total_cost }}</p>
+    <br>
+    <a href="{{ url_for('home') }}">Back to Home</a>
+</body>
+</html>

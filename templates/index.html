@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Supplier and Customer System</title>
+</head>
+<body>
+    <h1>Welcome to Supplier and Customer System</h1>
+    <h2>Suppliers:</h2>
+    <ul>
+        {% for supplier_name, supplier_data in suppliers_data.items() %}
+        <li>{{ supplier_name }} - {{ supplier_data['material'] }}</li>
+        {% endfor %}
+    </ul>
+
+    <a href="{{ url_for('add_supplier') }}">Add Supplier</a>
+    <br>
+    <a href="{{ url_for('customer') }}">Order as Customer</a>
+</body>
+</html>
